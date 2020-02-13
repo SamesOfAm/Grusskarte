@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ed5e766d-4da6-4569-8b95-ffbb68587c26" name="Server" url="http://ftp.klapproth-koch.de">
+        <fileTransfer host="ftp.klapproth-koch.de" port="21" rootFolder="/grusskarte-contao">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

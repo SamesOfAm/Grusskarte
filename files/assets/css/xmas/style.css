@@ -1,0 +1,468 @@
+body {
+    font-family: 'Merriweather', serif;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+body:not(.short) {
+    height: 130vh;
+}
+
+.ce_gallery {
+    display: none;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#main .inside {
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+
+input[type=text],input[type=email],input[type=password],button[type=submit],textarea {
+    width: 99.4%;
+    margin: 5px;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+input,select,textarea,button {
+    padding: 15px;
+}
+
+label[for=addCustomMessage]{
+    position: absolute;
+    width: 225px;
+    left: 25px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[name=nameSender] {
+    margin-top: 0;
+}
+
+input[name=emailRecipient] {
+    margin-bottom: 1px;
+}
+
+input[type=text]:hover,input[type=email]:hover,input[type=password]:hover,button[type=submit]:hover,textarea:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+button[type=submit] {
+    box-sizing: border-box;
+    margin: 20px 5px 0;
+}
+
+::-webkit-input-placeholder {
+    color:    white;
+    font-style: italic;
+}
+:-moz-placeholder {
+    color:    white;
+    font-style: italic;
+    opacity:  1;
+}
+::-moz-placeholder {
+    color:    white;
+    font-style: italic;
+    opacity:  1;
+}
+:-ms-input-placeholder {
+    color:    white;
+    font-style: italic;
+}
+::-ms-input-placeholder {
+    color:    white;
+    font-style: italic;
+}
+
+::placeholder {
+    color:    white;
+    font-style: italic;
+}
+
+.explanation:not(.info-text-custom) {
+    width: 99.4%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    color: white;
+}
+
+.email-info {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.explanation p {
+    margin: 0;
+}
+
+.copyOptIn span {
+    display: block;
+    width: 99.4%;
+    margin: 0 5px 5px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#getCopy {
+    cursor: pointer;
+}
+
+label[for="getCopy"] {
+    cursor: pointer;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.info-text {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.imageSelect {
+    display: none;
+}
+
+.img-options ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.img-options li {
+    float: left;
+    background-color: rgba(0,0,0,0.4);
+    padding: 15px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 200ms;
+}
+
+.img-options li:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.img-options li span {
+    display: block;
+    width: 8px;
+}
+
+.img-options li.selected {
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid white;
+}
+
+.info-text-custom {
+    width: 99.4%;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    margin: 68px 5px 0;
+    clear: both;
+}
+
+.info-text-custom p {
+    margin: 0;
+}
+
+.customWrapper {
+    position: relative;
+}
+
+.customMessage {
+    margin-top: 0;
+    margin-bottom: 0;
+    caret-color: red;
+}
+
+.copyOptIn input,
+.copyOptIn label,
+.addCustomMessage input,
+.addCustomMessage label {
+    cursor: pointer;
+}
+
+.generic-text {
+    width: 99.4%;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 10px 35px;
+    margin: 5px;
+}
+
+.privacy fieldset {
+    width: 99.4%;
+    margin: 0 5px 5px;
+    color: white;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+}
+
+.privacy label a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+#show-msg-article {
+    position: relative;
+    overflow: visible;
+    margin-bottom: 100px;
+    font-size: 17pt;
+}
+
+#show-msg-article .ce_text:not(.logo) {
+    padding: 20px 30px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+p.error {
+    color: #ff7878;
+    font-size: 13px;
+    padding: 0 10px;
+    background: rgba(0,0,0,0.4);
+    margin: 0 0 -4px 5px;
+}
+
+input.error {
+    border-color: red;
+}
+
+.form-article {
+    position: relative;
+    overflow: visible;
+}
+
+.logo {
+    position: absolute;
+    top: -135px;
+    right: -220px;
+    width: 200px;
+    height: 130px;
+    background: rgba(0,0,0,0.65);
+}
+
+.logo img {
+    width: 90%;
+}
+
+.logo p {
+    color: gray;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.logo figure {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.logo.white-bg {
+    background: white;
+}
+
+.logo.white-bg img {
+    width: 77%;
+}
+
+.address {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 200px;
+    height: auto;
+    margin: 0 !important;
+    background: rgba(0,0,0,0.65) !important;
+    text-align: center;
+    font-size: 16px !important;
+    padding: 0 !important;
+}
+
+.address p {
+    padding: 0 10px;
+}
+
+.address p:first-child {
+    margin-top: 34px;
+}
+
+.address.bright-bg {
+    background: rgba(0,0,0,0.4);
+}
+
+.formbody {
+    padding: 1px;
+}
+
+.sent .mod_article {
+    position: relative;
+    overflow: visible;
+   background-color: rgba(0,0,0,0.2);
+}
+
+.privacy .mod_article {
+    position: relative;
+    overflow: visible;
+   background-color: rgba(0,0,0,0.2);
+    padding: 40px;
+}
+
+.privacy .back-link a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.2);
+    transition: background-color 250ms;
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -o-transition: background-color 250ms;
+}
+
+.privacy .back-link a:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.sent .ce_text:not(.logo,.address) {
+    margin: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.sent .send-another a {
+    display: block;
+    width: 80%;
+    margin: 30px auto 0;
+    background-color: rgba(255,255,255,0.2);
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-variant: all-petite-caps;
+    font-size: 25px;
+    transition: background-color 250ms;
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -o-transition: background-color 250ms;
+}
+
+.sent .send-another a:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#frohe-weihnachten {
+    position: absolute;
+    top: 80px;
+    left: 5vw;
+    width: 60vw;
+    max-width: 830px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+    overflow: visible;
+}
+
+.signature img {
+    width: 30%;
+}
+
+.card-signature {
+    background-color: rgba(0,0,0,0.4);
+    padding-left: 20px;
+}
+
+.card-signature img {
+    width: 30%;
+}
+
+.address-sender input {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        height: 235vh;
+    }
+    #main .inside {
+        width: 90%;
+    }
+    #frohe-weihnachten {
+        top: 30px;
+        width: 90vw;
+    }
+    .logo {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 160px;
+        margin: 15px 0;
+    }
+    .logo figure img {
+        width: 40%;
+    }
+    .address {
+        display: none;
+    }
+    body.login {
+        height: 100vh;
+    }
+    body.sent,body.short {
+        height: 130vh;
+    }
+    textarea {
+        width: 98.4%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .logo figure img {
+        width: 80%;
+    }
+}
