@@ -72,7 +72,7 @@
             console.log(emailSenderIfOptIn.value);
         }
         if(multipleRecipients) {
-            emailRecipientFill.value = "weihnachten@grusskarte.online";
+            emailRecipientFill.value = "ziola@grusskarte.online";
             emailRecipientFillBcc.value = recipientField.value;
         } else {
             emailRecipientFill.value = recipientField.value;

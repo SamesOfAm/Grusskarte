@@ -257,6 +257,7 @@ label[for="getCopy"] {
 #show-msg-article .ce_text:not(.logo) {
     padding: 20px 30px;
     background-color: rgba(0,0,0,0.4);
+    word-break: break-word;
 }
 
 p.error {
